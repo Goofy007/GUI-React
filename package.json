@@ -1,0 +1,20 @@
+{
+  "name": "GUI-React",
+  "version": "1.0.0",
+  "description": "React+Typescript UI Library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goofy007/GUI-React.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Goofy007/GUI-React/issues"
+  },
+  "homepage": "https://github.com/Goofy007/GUI-React#readme"
+}
