@@ -5,6 +5,9 @@ module.exports = {
     entry: {
         index: './lib/index.tsx' // 程序的入口
     },
+    resolve: {
+        extensions: ['.ts','.tsx','.js','.jsx']
+    },
     output: { //程序的出口
         path: path.resolve(__dirname,'./dist/lib'), //打包的路径
         library: 'GUI-React',  //库的名称
