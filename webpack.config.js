@@ -1,15 +1,15 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
-    mode: 'production',
+    // mode: 'production',
     entry: {
         index: './lib/index.tsx' // 程序的入口
     },
     resolve: {
-        extensions: ['.ts','.tsx','.js','.jsx']
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     output: { //程序的出口
-        path: path.resolve(__dirname,'./dist/lib'), //打包的路径
+        path: path.resolve(__dirname, './dist/lib'), //打包的路径
         library: 'GUI-React',  //库的名称
         libraryTarget: 'umd'
     },
@@ -21,10 +21,24 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'GUI',
-            template: 'index.html'
-        })
-    ]
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         title: 'GUI',
+    //         template: 'index.html'
+    //     })
+    // ],
+    // externals: {
+    //     react: {
+    //         commonjs: 'react',
+    //         commonjs2: 'react',
+    //         amd: 'react',
+    //         root: 'React'
+    //     },
+    //     'react-dom': {
+    //         commonjs: 'react-dom',
+    //         commonjs2: 'react-dom',
+    //         amd: 'react-dom',
+    //         root: 'ReactDOM'
+    //     }
+    // }
 }
