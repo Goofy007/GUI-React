@@ -1,14 +1,17 @@
 import React from 'react'
 import '../icons/wechat.svg'
 import "./icon.scss"
+import classes from "./helpers/classes"
 
-interface IconProps {
+interface IconProps extends React.SVGAttributes<SVGElement> {
     name: string;
-    onClick: React.MouseEventHandler<SVGElement>
 }
 const Icon: React.FunctionComponent<IconProps> = (props) => {
+    const {className, ...restProps} = props
     return (
-        <svg className="gui-icon" onClick={props.onClick}>
+        <svg className={classes('gui-icon', className)}
+            {...restProps}
+        >
             <use xlinkHref={`#${props.name}`}></use>
         </svg>
     )
