@@ -1,0 +1,9 @@
+[class^=gui-]{
+    box-sizing: border-box;
+}
+
+[class^=gui-]::after,
+[class^=gui-]::before
+{
+    box-sizing: border-box;
+}

@@ -6,7 +6,18 @@ export default function () {
     return (
         <div>
             <button onClick={() => setX(!x)}>click</button>
-            <Dialog visible={x}></Dialog>
+            <Dialog
+                visible={x}
+                buttons={
+                    [
+                        <button onClick={() => { setX(false) }}>1</button>,
+                        <button>2</button>
+                    ]
+                }
+                onClose={() => { setX(false) }}
+            >
+                <div>content</div>
+            </Dialog>
         </div>
     )
 }
