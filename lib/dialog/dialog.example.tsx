@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
-import Dialog, { alert } from './dialog'
+import Dialog, { alert, confirm, modal } from './dialog'
 
 export default function () {
     const [x, setX] = useState(false)
+    const openModal = () => {
+        const close = modal(
+            <h1>Hello
+                 <button onClick={() => {close()}}>close</button>
+            </h1>
+        )
+    }
     return (
         <div>
             <div>
@@ -23,7 +30,21 @@ export default function () {
             </div>
             <div>
                 <h1>example2</h1>
-                <button onClick={() => alert("hello")}>click</button>
+                <button onClick={() => alert("hello")}>alert</button>
+                <button onClick={
+                    () => {
+                        confirm('confirm 1',
+                            () => { console.log("yes") },
+                            () => { console.log("no") })
+                    }
+                }
+                >
+                    confirm
+                </button>
+            </div>
+            <div>
+                <h1>example 3</h1>
+                <button onClick={openModal}>modal</button>
             </div>
 
         </div>
