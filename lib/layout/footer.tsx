@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import classes from "../helpers/classes";
 
-const Footer: React.FunctionComponent = () => {
+interface Props extends React.HTMLAttributes<HTMLElement> {
+
+}
+
+const Footer: React.FunctionComponent<Props> = (props) => {
+    const {className,...rest} = props
     return (
-        <div>cc</div>
+        <div className={classes('gui-layout-footer', className)} {...rest}>
+           Footer
+        </div>
     )
 }
 

@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import classes from "../helpers/classes";
 
-const Aside: React.FunctionComponent = () => {
+interface Props extends React.HTMLAttributes<HTMLElement> {
+
+}
+
+const Aside: React.FunctionComponent<Props> = (props) => {
+    const {className,...rest} = props
     return (
-        <div></div>
+        <div className={classes('gui-layout-aside', className)} {...rest}>
+           Aside
+        </div>
     )
 }
 
