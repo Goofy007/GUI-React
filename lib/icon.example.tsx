@@ -1,6 +1,9 @@
 import React from 'react';
 import Icon from './icon';
 
+const code = require('!!raw-loader!./icon.example.tsx');
+
+
 
 const fn: React.MouseEventHandler = (e) => {
     console.log(e)
@@ -8,7 +11,12 @@ const fn: React.MouseEventHandler = (e) => {
 
 const IconExample: React.FunctionComponent = () => {
     return (
-        <Icon name="wechat" onClick={fn} />
+        <div>
+            <Icon name="wechat" onClick={fn} />
+            <pre>
+                {code.default}
+            </pre>
+        </div>
     )
 }
 
