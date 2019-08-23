@@ -3,8 +3,14 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Icon from './icon.example';
 import Dialog from "./dialog/dialog.example";
-import Layout from "./layout/layout.example"
-import "./index.scss"
+import LayoutExample from "./layout/layout.example"
+import Layout from "./layout/layout";
+import Header from "./layout/header";
+import Content from "./layout/content";
+import Footer from "./layout/footer";
+import Aside from "./layout/aside";
+import "./index.scss";
+const logo = require("./logo.png");
 
 // const fn: React.MouseEventHandler = (e) => {
 //     console.log(e)
@@ -12,12 +18,15 @@ import "./index.scss"
 
 ReactDOM.render(
     <Router>
-        <div>
-            <header>
-                <div>GUI</div>
-            </header>
-            <div>
-                <aside>
+        <Layout className="site-examples">
+            <Header className="site-header">
+                <div className="site-logo">
+                    <img width="64" height="64" src={logo} alt="" />
+                    <span>GUI</span>
+                </div>
+            </Header>
+            <Layout>
+                <Aside className="site-aside">
                     <h2>组件</h2>
                     <ul>
                         <li>
@@ -30,14 +39,17 @@ ReactDOM.render(
                             <Link to="/layout">布局</Link>
                         </li>
                     </ul>
-                </aside>
-                <main>
+                </Aside>
+                <Content className="site-main">
                     <Route path="/icon" component={Icon}></Route>
                     <Route path="/dialog" component={Dialog}></Route>
-                    <Route path="/layout" component={Layout}></Route>
-                </main>
-            </div>
-        </div>
+                    <Route path="/layout" component={LayoutExample}></Route>
+                </Content>
+            </Layout>
+            <Footer className="site-footer">
+                @copy: Goofy
+            </Footer>
+        </Layout>
     </Router>
     , document.querySelector('#root'));
 

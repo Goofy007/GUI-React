@@ -9,7 +9,7 @@ const Aside: React.FunctionComponent<Props> = (props) => {
     const {className,...rest} = props
     return (
         <div className={classes('gui-layout-aside', className)} {...rest}>
-           Aside
+           {props.children}
         </div>
     )
 }

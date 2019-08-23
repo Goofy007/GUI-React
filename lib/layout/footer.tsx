@@ -9,7 +9,7 @@ const Footer: React.FunctionComponent<Props> = (props) => {
     const {className,...rest} = props
     return (
         <div className={classes('gui-layout-footer', className)} {...rest}>
-           Footer
+           {props.children}
         </div>
     )
 }
