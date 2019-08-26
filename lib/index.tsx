@@ -9,6 +9,7 @@ import Header from "./layout/header";
 import Content from "./layout/content";
 import Footer from "./layout/footer";
 import Aside from "./layout/aside";
+import SheetExample from "./sheet/sheet.example";
 import "./index.scss";
 const logo = require("./logo.png");
 
@@ -38,12 +39,16 @@ ReactDOM.render(
                         <li>
                             <Link to="/layout">布局</Link>
                         </li>
+                        <li>
+                            <Link to="/sheet">电子表格</Link>
+                        </li>
                     </ul>
                 </Aside>
                 <Content className="site-main">
                     <Route path="/icon" component={IconDemo}></Route>
                     <Route path="/dialog" component={Dialog}></Route>
                     <Route path="/layout" component={LayoutExample}></Route>
+                    <Route path="/sheet" component={SheetExample}></Route>
                 </Content>
             </Layout>
             <Footer className="site-footer">
