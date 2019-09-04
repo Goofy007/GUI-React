@@ -5,9 +5,9 @@ import LayoutExample3 from "./layout.example3";
 import { Demo } from "../../demo";
 
 
-const code1 = require('!!raw-loader!./example1.code.tsx');
-const code2 = require('!!raw-loader!./example2.code.tsx');
-const code3 = require('!!raw-loader!./example3.code.tsx');
+const code1 = require('!!raw-loader!./layout.example1.tsx');
+const code2 = require('!!raw-loader!./layout.example2.tsx');
+const code3 = require('!!raw-loader!./layout.example3.tsx');
 
 
 export const LayoutDemo =  () => {
