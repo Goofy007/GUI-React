@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { IconDemo } from './icons/icon.demo';
+import {LayoutDemo} from "./layout/demos/lauout.demo";
 import Dialog from "./dialog/dialog.example";
-import LayoutExample from "./layout/layout.example"
+// import LayoutExample from "./layout/layout.example"
 import Layout from "./layout/layout";
 import Header from "./layout/header";
 import Content from "./layout/content";
@@ -47,7 +48,7 @@ ReactDOM.render(
                 <Content className="site-main">
                     <Route path="/icon" component={IconDemo}></Route>
                     <Route path="/dialog" component={Dialog}></Route>
-                    <Route path="/layout" component={LayoutExample}></Route>
+                    <Route path="/layout" component={LayoutDemo}></Route>
                     <Route path="/sheet" component={SheetExample}></Route>
                 </Content>
             </Layout>
