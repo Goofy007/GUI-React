@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { IconDemo } from './icon.demo';
+import { IconDemo } from './icons/icon.demo';
 import Dialog from "./dialog/dialog.example";
 import LayoutExample from "./layout/layout.example"
 import Layout from "./layout/layout";

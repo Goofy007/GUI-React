@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactFragment, ReactNode } from "react"
 import ReactDOM from 'react-dom'
 import "./dialog.scss"
-import Icon from "../icon"
+import Icon from "../icons/icon"
 
 interface Props {
     visible: boolean;
