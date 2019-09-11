@@ -7,16 +7,16 @@ interface Props {
 
 
 export const Demo: React.FunctionComponent<Props> = (props) => {
-    const [codeVisible,setCodeVisible] = useState(false)
+    const [codeVisible, setCodeVisible] = useState(false)
     return (
         <div>
             <div>{props.children}</div>
             <div>
                 <button onClick={() => {
                     setCodeVisible(!codeVisible)
-                }}>查看代码</button>
+                }} >查看</button>
             </div>
-            
+
             {codeVisible && <Highlight {...defaultProps} code={props.code} language="jsx">
                 {
                     ({ className, style, tokens, getLineProps, getTokenProps }) => (

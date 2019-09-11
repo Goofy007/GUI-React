@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-// import ReactDOM from 'react-dom'
 import Sheet from "./sheet"
-
-// interface Props { }
-
 
 export default function () {
     const [data, setData] = useState(
@@ -19,7 +15,7 @@ export default function () {
             rows: [
                 [
                     { row: 1, col: 0, text: '1' },
-                    { row: 1, col: 1, text: '' },
+                    { row: 1, col: 1, text: '语文' },
                     { row: 1, col: 2, text: '' },
                     { row: 1, col: 3, text: '' },
 

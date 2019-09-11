@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { IconDemo } from './icons/icon.demo';
-import {LayoutDemo} from "./layout/demos/lauout.demo";
+import { LayoutDemo } from "./layout/demos/lauout.demo";
 import Dialog from "./dialog/dialog.example";
 // import LayoutExample from "./layout/layout.example"
 import Layout from "./layout/layout";
@@ -10,7 +10,7 @@ import Header from "./layout/header";
 import Content from "./layout/content";
 import Footer from "./layout/footer";
 import Aside from "./layout/aside";
-import SheetExample from "./sheet/sheet.example";
+import { SheetDemo } from "./sheet/sheet.demo";
 import "./index.scss";
 const logo = require("./logo.png");
 
@@ -49,7 +49,7 @@ ReactDOM.render(
                     <Route path="/icon" component={IconDemo}></Route>
                     <Route path="/dialog" component={Dialog}></Route>
                     <Route path="/layout" component={LayoutDemo}></Route>
-                    <Route path="/sheet" component={SheetExample}></Route>
+                    <Route path="/sheet" component={SheetDemo}></Route>
                 </Content>
             </Layout>
             <Footer className="site-footer">

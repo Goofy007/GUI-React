@@ -1,11 +1,10 @@
 #sheet {
-    tr {
-        border : 1px solid #eeeeee;
-    }
-
-    td {
-        border:  1px solid rgb(199, 196, 196);
-        padding: 0px;
-        min-width: 55px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    text-align: center;
+    tr,th,td{
+        width: 80px;
+        height: 30px;
+        border: 1px solid #ccc;
     }
 }

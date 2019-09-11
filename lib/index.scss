@@ -12,6 +12,9 @@ $main-color: #6c87e6;
 * {margin: 0; padding: 0; box-sizing: border-box;}
 *::after{box-sizing:border-box}
 a {text-decoration: none; color: inherit;}
+button {
+    cursor: pointer;
+}
 pre {
     font-family: Consolas;
 }
