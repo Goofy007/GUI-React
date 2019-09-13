@@ -11,6 +11,7 @@ import Content from "./layout/content";
 import Footer from "./layout/footer";
 import Aside from "./layout/aside";
 import { SheetDemo } from "./sheet/sheet.demo";
+import PageDemp from "./page/page.demo"
 import "./index.scss";
 const logo = require("./logo.png");
 
@@ -43,6 +44,9 @@ ReactDOM.render(
                         <li>
                             <Link to="/sheet">电子表格</Link>
                         </li>
+                        <li>
+                            <Link to="/page">Page</Link>
+                        </li>
                     </ul>
                 </Aside>
                 <Content className="site-main">
@@ -50,6 +54,7 @@ ReactDOM.render(
                     <Route path="/dialog" component={Dialog}></Route>
                     <Route path="/layout" component={LayoutDemo}></Route>
                     <Route path="/sheet" component={SheetDemo}></Route>
+                    <Route path="/page" component={PageDemp}></Route>
                 </Content>
             </Layout>
             <Footer className="site-footer">
